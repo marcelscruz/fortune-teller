@@ -15,13 +15,14 @@
 
 	<h1 id="title">Santeria</h1>
 
-
-	<label>Insert your question</label>
-	<input type="text" id="insert">
-	<button type="button" id="button">Click</button>
-	<p>The answer you're looking for is <span id="answer"></span>.</p>
-
+	<h2>Insert your question and press ENTER</h2>
 	
+	<input type="text" id="insert1" onkeypress="next_letter()" autofocus>
+	<input type="text" id="insert2">
+	
+	<h3 id="answer"></h3>
+	
+<!--	<input onblur="this.focus()" autofocus /> -->
 
 	<script type="text/javascript" src="script.js"></script>
 

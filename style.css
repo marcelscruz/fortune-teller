@@ -1,12 +1,48 @@
 body {
-	background: #888
+	background: #888;
+	margin: 0 auto;
+	padding: 0;
 }
 
 #title {
 	text-align: center;
-	
 }
 
 #insert {
 	width: 500px;
+}
+
+#insert1 {
+	position: absolute;
+	bottom: 100px;
+	left: 150px;
+	width: 1000px;
+	height: 40px;
+	z-index: 1;
+	font-size: 30px;
+	/*	opacity: 1.0;*/
+	/*    filter: alpha(opacity=50);  For IE8 and earlier */
+}
+
+#insert2 {
+	/*	background: yellow;*/
+	position: absolute;
+	bottom: 10px;
+	left: 150px;
+	width: 1000px;
+	height: 40px;
+	z-index: 0;
+	font-size: 30px;
+}
+
+
+h2 {
+	text-align: center;
+	margin-top: 200px;
+}
+
+h3 {
+	text-align: center;
+	margin-top: 300px;
+	bottom: 300px;
 }

@@ -1,48 +1,213 @@
-body {
-	background: #888;
-	margin: 0 auto;
+@import url('https://fonts.googleapis.com/css?family=Raleway|Inknut+Antiqua');
+
+* {
+	margin: 0;
 	padding: 0;
+	font-family: 'Raleway', sans-serif;
 }
 
-#title {
+.container-fluid {
+	padding: 0;
+	background: url(images/fort4.png) no-repeat;
+	background-size: cover;
+}
+
+/* LANGUAGES */
+#lang {
+	color: #aaa;
+	font-family: 'Inknut Antiqua', serif;
+	font-size: 20px;
+	position: absolute;
+	top: 3%;
+	left: 3%;
+}
+
+#lang a {
+	font-family: 'Inknut Antiqua', serif;
+	text-decoration: none;
+	color: #aaa;
+}
+
+#lang a:hover {
+	color: #fff;
+}
+
+.active {
+	pointer-events: none;
+}
+
+/*
+.inactive {
+	pointer-events: auto;
+	color: red;
+}
+
+.inactive:hover {
+	color: red;
+}
+*/
+
+/* LANGUAGES END */
+
+/* ? BUTTON */
+#about {
+	color: #aaa;
+	font-family: 'Inknut Antiqua', serif;
+	font-size: 50px;
+	position: absolute;
+	top: 3%;
+	right: 3%;
+	cursor: pointer;
+}
+
+#about:hover, #about:focus {
+	color: #fff;
+	text-decoration: none;
+}
+/* ? BUTTON END */
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4);
+}
+
+
+.modal-content {
+	background-color: rgba(0,0,0,0.9);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #222;
+    width: 80%; 
+	height: 500px;
+	color: #ddd;
+	position: relative;
+}
+
+.modal-content p, h1, h2, h3 {
+	font-family: 'Inknut Antiqua', serif;
+/*	color: red;*/
 	text-align: center;
+	max-width: 800px;
+	margin: 0 auto;
+	position: relative;
+	top: 50px;
+	text-transform: uppercase;
+	font-weight: 100;
+	line-height: 40px;
 }
 
-#insert {
-	width: 500px;
+#author {
+	text-align: right;
+	position: relative;
+	margin: 0 auto;
+	height: 40px;
+	width: 400px;
+	top: 370px;
+}
+
+#author p {
+	color: #777;
+	text-align: center;
+	text-transform: none;
+	font-family: 'Raleway', sans-serif;
+}
+
+#author a {
+	color: #aaa;
+}
+
+#author a:hover {
+	color: #fff;
+}
+
+.x-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+	opacity: 1.0;
+	text-shadow: none;
+	position: relative;
+	top: -50px;
+	
+}
+
+.x-button:hover,
+.x-button:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.underline {
+	text-decoration: underline;
+	font-family: inherit;
+}
+/* MODAL END*/
+
+/* MAIN */
+#page-section{
+	height: 100vh;
+}
+
+#answer {
+/*	text-align: center;*/
+	margin: 0 auto 15%;
+	font-size: 40px;
+	font-family: 'Inknut Antiqua', serif;
+	display: none;
+	max-width: 300px;
+/*	text-transform: none;*/
+}
+
+/* MAIN END */
+
+/* INPUT */
+#input-section {
+	text-align: center;
+	position: absolute;
+	bottom: 5%;
+	margin: 0 auto;
+}
+
+#input-section input {
+	background: transparent;
+	width: 1200px;
+	height: 40px;
+	font-size: 30px;
+	color : transparent;
+    text-shadow : 0 0 0 #f4f5de;
+	border: none;
+	border-bottom: 1px solid #e9e2b4;
+}
+
+#input-section input:focus {
+	outline: none;
 }
 
 #insert1 {
 	position: absolute;
-	bottom: 100px;
-	left: 150px;
-	width: 1000px;
-	height: 40px;
 	z-index: 1;
-	font-size: 30px;
-	/*	opacity: 1.0;*/
-	/*    filter: alpha(opacity=50);  For IE8 and earlier */
 }
 
 #insert2 {
-	/*	background: yellow;*/
-	position: absolute;
-	bottom: 10px;
-	left: 150px;
-	width: 1000px;
-	height: 40px;
+	position: relative;
+/*	bottom: -40px;*/
 	z-index: 0;
-	font-size: 30px;
+	opacity: 0;
 }
 
-
-h2 {
-	text-align: center;
-	margin-top: 200px;
+#instruction {
+	color: #ccc;
+	margin: 20px 0 -30px;
 }
-
-h3 {
-	text-align: center;
-	margin-top: 300px;
-	bottom: 300px;
-}
+/* INPUT END */

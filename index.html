@@ -3,28 +3,79 @@
 
 <head>
 
+
+
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<title>Santeria</title>
 
-	<link type="text/css" href="style.css" rel="stylesheet">
+	<!-- jQuery -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
+	<!-- Bootstrap -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<link type="text/css" href="style.css" rel="stylesheet">
 
 
 </head>
 
 <body>
 
-	<h1 id="title">Santeria</h1>
+	<p id="about">?</p>
 
-	<h2>Insert your question and press ENTER</h2>
-	
-	<input type="text" id="insert1" onkeypress="next_letter()" autofocus>
-	<input type="text" id="insert2">
-	
-	<h3 id="answer"></h3>
-	
-<!--	<input onblur="this.focus()" autofocus /> -->
+	<div id="lang">
+		<p><a href="#" class="active" id="en" onclick="english()">en</a> | <a href="#" class="" id="pt" onclick="portuguese()">pt</a></p>
+	</div>
 
+	<div class="container-fluid" id="page-section">
+
+
+		<div id="myModal" class="modal">
+
+			<!-- Modal content -->
+			<div class="modal-content">
+
+				<div id="author">
+					<p>made by <a href="http://facebook.com/marcelscruz" target="_blank">Marcel Cruz</a></p>
+				</div>
+
+				<span class="x-button">&times;</span>
+
+				<h3>Press <span class='underline'>TAB</span> to start typing the answer<br><br>Press <span class='underline'>TAB</span> again once you're done to finish writing the question</h3>
+
+
+			</div>
+
+		</div>
+
+
+		<div class="col-md-12" id="input-section">
+
+			<h3 id="answer"></h3>
+			<br><br>
+			<input type="text" id="insert1" onkeypress="next_letter()" autofocus>
+			<input type="text" id="insert2">
+			<p id="instruction">Type your question and press ENTER to ask her</p>
+
+		</div>
+
+	</div>
+
+
+	<!-- JS file -->
+	<script type="text/javascript" src="modal.js"></script>
 	<script type="text/javascript" src="script.js"></script>
+
+
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<!-- Plugins -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 
 </body>

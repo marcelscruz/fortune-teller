@@ -17,6 +17,7 @@ btn.onclick = function() {
 span.onclick = function() {
 //    modal.style.display = "none";
 	$(".modal").fadeOut(300);
+	insert1.focus();
 }
 
 // When the user clicks anywhere outside of the modal, close it
@@ -24,5 +25,6 @@ window.onclick = function(event) {
     if (event.target == modal) {
 //        modal.style.display = "none";
 		$(".modal").fadeOut(300);
+		insert1.focus();
     }
 }

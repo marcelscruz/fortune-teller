@@ -14,15 +14,15 @@ window.onpaint = english();
 /* ENGLISH  */ 
 function english() {
 
-	questions = ['Ma\'am, could you tell me what is ', 'Dear Sant, I\'d like know what is ', 'Please, could you tell me what is '];
+	questions = ['Miss, could you tell me what is ', 'Dear, I\'d like know what is ', 'Please, could you tell me what is '];
 	
 	noAnswer = 'You should be more polite';
 	
 	madeBy.innerHTML = 'made by ';
 	
-	help.innerHTML = "Press <span class='underline'>TAB</span> to start typing the answer<br><br>Press <span class='underline'>TAB</span> again once you're done to finish writing the question";
+	help.innerHTML = "Press TAB to start typing the <span class='underline'>answer</span>. It won't appear on the screen, you'll actually see the beginning of the q<span class='underline'>uestion</span> being written for you while you type.<br><br>Press TAB again once the <span class='underline'>answer</span> is ready, so you can finish typing the q<span class='underline'>uestion</span> by yourself.";
 	
-	instr.innerHTML = 'Type your question and press ENTER to ask her';
+	instr.innerHTML = 'Type your question and press ENTER to ask or ESC to reset';
 	
 	$("#pt").removeClass("active");
 	$("#en").addClass("active");
@@ -39,9 +39,9 @@ function portuguese() {
 	
 	madeBy.innerHTML = 'feito por ';
 	
-	help.innerHTML = "Aperte <span class='underline'>TAB</span> para começar a escrevar a resposta<br><br>Aperte <span class='underline'>TAB</span> de novo quando estiver pronto para terminar de escrever a pergunta";
+	help.innerHTML = "Aperte TAB para começar a digitar a <span class='underline'>res</span>p<span class='underline'>osta</span>. Ela não vai aparecer na tela, você vai na verdade ver a p<span class='underline'>er</span>g<span class='underline'>unta</span> sendo escrita enquanto você digita.<br><br>Aperte TAB de novo quando a <span class='underline'>res</span>p<span class='underline'>osta</span> estiver pronta, então você pode terminar de digitar a p<span class='underline'>er</span>g<span class='underline'>unta</span> por si mesmo.";
 	
-	instr.innerHTML = 'Escreva sua pergunta e aperte ENTER para perguntar';
+	instr.innerHTML = 'Escreva sua pergunta e aperte ENTER para perguntar ou ESC para reiniciar';
 	
 	$("#en").removeClass("active");
 	$("#pt").addClass("active");
@@ -69,6 +69,7 @@ document.onkeydown = function (evt) {
 		ask();
 	} else if (evt.keyCode == 27) {
 		$(".modal").fadeOut(300);
+		insert1.focus();
 	}
 };
 

@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Santeria</title>
+	<title>Fortune Teller</title>
 
 	<!-- jQuery -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -22,8 +22,9 @@
 <body>
 	
 	<!-- LANGUAGUES -->
+	
 	<div id="lang">
-		<p><a href="#" class="active" id="en" onclick="english()">en</a> | <a href="#" class="" id="pt" onclick="portuguese()">pt</a></p>
+		<p class="active" id="en" onclick="english()">en</p> | <p class="" id="pt" onclick="portuguese()">pt</p>
 	</div>
 	
 	<!-- ABOUT -->
@@ -48,15 +49,22 @@
 		</div>
 
 		<!-- MAIN SECTION -->
-		<div class="col-md-12" id="input-section">
-
+		
+		<div id="answer_section">
 			<h3 id="answer"></h3>
+		</div>
+		
+		<div class="col-md-12" id="input-section">
+			
 			<br><br>
 			<input type="text" id="insert1" onkeypress="next_letter()" autofocus>
 			<input type="text" id="insert2">
 			<p id="instruction"></p>
 
 		</div>
+		
+		
+		
 	</div>
 
 

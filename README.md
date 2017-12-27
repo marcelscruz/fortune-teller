@@ -2,7 +2,7 @@
 
 Fortune Teller is a game where you can impress your friends by guessing.
 
-## How to play 
+## How to Play 
 
 * Step 1: once the game starts press TAB to activate the "hide the answer" feature, so you can start typing the final answer in the background while a pre-configured question is being written on the screen for you.
 

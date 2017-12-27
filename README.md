@@ -1,6 +1,6 @@
 # Fortune Teller
 
-Fortune Teller is a game where you can impress your friends by guessing.
+Fortune Teller is a game that you can impress your friends by guessing their questions.
 
 ## How to play 
 

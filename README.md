@@ -16,6 +16,7 @@ Fortune Teller is a game that you can impress your friends by guessing their que
 
 * HTML
 * CSS
+* Bootstrap
 * JavaScript
 * jQuery
 

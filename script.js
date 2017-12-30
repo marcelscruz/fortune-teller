@@ -11,42 +11,42 @@ var pt = document.getElementById('pt');
 window.onpaint = english();
 
 
-/* ENGLISH  */
+/* ENGLISH  */ 
 function english() {
 
 	questions = ['Miss, could you tell me what is ', 'Dear, I\'d like know what is ', 'Please, could you tell me what is '];
-
+	
 	noAnswer = 'You should be more polite';
-
+	
 	madeBy.innerHTML = 'made by ';
-
+	
 	help.innerHTML = "Press TAB to start typing the <span class='underline'>answer</span>. It won't appear on the screen, you'll actually see the beginning of the q<span class='underline'>uestion</span> being written for you while you type.<br><br>Press TAB again once the <span class='underline'>answer</span> is ready, so you can finish typing the q<span class='underline'>uestion</span> by yourself.";
-
+	
 	instr.innerHTML = 'Type your question and press ENTER to ask or ESC to reset';
-
+	
 	$("#pt").removeClass("active");
 	$("#en").addClass("active");
 	insert1.focus();
-
+	
 };
 
 /* PORTUGUESE */
 function portuguese() {
 
 	questions = ['A senhora poderia me dizer qual é ', 'Senhora vidente, poderia me dizer qual é ', 'Por favor, poderia me dizer qual é '];
-
+	
 	noAnswer = 'Você deveria ser mais educado';
-
+	
 	madeBy.innerHTML = 'feito por ';
-
+	
 	help.innerHTML = "Aperte TAB para começar a digitar a <span class='underline'>res</span>p<span class='underline'>osta</span>. Ela não vai aparecer na tela, você vai na verdade ver a p<span class='underline'>er</span>g<span class='underline'>unta</span> sendo escrita enquanto você digita.<br><br>Aperte TAB de novo quando a <span class='underline'>res</span>p<span class='underline'>osta</span> estiver pronta, então você pode terminar de digitar a p<span class='underline'>er</span>g<span class='underline'>unta</span> por si mesmo.";
-
+	
 	instr.innerHTML = 'Escreva sua pergunta e aperte ENTER para perguntar ou ESC para reiniciar';
-
+	
 	$("#en").removeClass("active");
 	$("#pt").addClass("active");
 	insert1.focus();
-
+	
 };
 
 
@@ -58,22 +58,18 @@ document.onkeydown = function (evt) {
 
 	evt = evt || window.event;
 
-	// console.log(evt.keyCode);
-
 	if (evt.keyCode == 9 && count == 0) {
 		evt.preventDefault();
 		start();
-		count++;
+		count = count + 1;
 	} else if (evt.keyCode == 9 && count == 1) {
 		evt.preventDefault();
 		finish();
 	} else if (evt.keyCode == 13) {
 		ask();
-	} else if (evt.keyCode == 27 && modalOpened == true) {
+	} else if (evt.keyCode == 27) {
 		$(".modal").fadeOut(300);
 		insert1.focus();
-	} else if (evt.keyCode == 27 && modalOpened == false) {
-		document.location.reload();
 	}
 };
 
@@ -102,10 +98,10 @@ function ask() {
 
 	if (count == 0) {
 
-
+		
 		document.getElementById('answer').innerHTML = noAnswer;
 		document.getElementById('answer').style.marginBottom = '12%';
-
+		
 		$("#answer").fadeIn(4000);
 
 	} else if (count == 1) {
